@@ -1,9 +1,5 @@
 /* Estilos generales */
-/*
---primary-color: #008B8B;
-    --secondary-color: #838B8B;
-    --background-color: #53868B;
-*/
+
 :root {
     --primary-color: #606060;
     --secondary-color: #60878B;
@@ -211,6 +207,15 @@ h1 {
     color: var(--secondary-color); /* Color para el hover */
 }
 
+#profile-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
 #work {
     margin-bottom: 40px;
 }
@@ -279,7 +284,6 @@ h1 {
     text-align: center;
 }
 
-/* Opcional: Enlaces en la columna de detalles */
 .details-experience a {
     color: var(--secondary-color);
     text-decoration: none; 
@@ -317,12 +321,10 @@ h1 {
 
 /* papers */
 #papers-projects {
-    max-height: 100vh; /* O ajusta este valor según lo que necesites */
-    padding: 20px; /* Añade un poco de padding */
-    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+    max-height: 100vh; 
+    padding: 20px; 
+    box-sizing: border-box; 
 }
-
-
 
 #papers-projects h2 {
     font-size: 1.5rem;
@@ -331,7 +333,7 @@ h1 {
 
 #papers-projects ul {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual ancho */
+    grid-template-columns: repeat(1, 1fr); /* Dos columnas de igual ancho */
     gap: 20px; 
     list-style-type: none; 
     padding: 0;
@@ -372,7 +374,8 @@ h1 {
 
 /* congress */
 #congress {
-    margin: 20px 0;
+    padding-top: 30%;
+    padding-bottom: 10%;
 }
 
 
@@ -499,7 +502,7 @@ section h1 {
     color: #666;
 }
 
-/* Media query para tablets (max-width: 1024px) */
+/* Media query para tablets (max-width: 1200px) */
 @media (max-width: 1024px) {
     .section {
         padding: 20px;
@@ -630,6 +633,31 @@ section h1 {
         justify-content: space-around;
         padding-bottom: 5rem;
     }
+
+    #congress {
+    margin-top: 50%;
+    }
+
+    #congress .congress-item {
+        margin-bottom: 15px;
+    }
+    
+    #congress .congress-title {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #congress .congress-date {
+        margin-top: 5px;
+    }
+
+    #congress .congress-item p {
+        font-size: 16px;
+    }
+
+    #reviewed-open {
+    padding-top: 0;
+    }
 }
 
 /* Media query para móviles (max-width: 600px) */
@@ -691,7 +719,7 @@ section h1 {
     }
 
     .profiles-memberships h1 {
-        margin-top: -80%;
+        margin-top: -60%;
     }
 
     .profiles-memberships ul li {
@@ -707,9 +735,9 @@ section h1 {
         margin-top: 5rem;
         
     }
-    .lista-profile a {
+
+    .lista-profile ul{
         margin-left: -5%;
-        width: 2rem;
     }
 
     .lista-profile li {
@@ -766,7 +794,10 @@ section h1 {
     }
 
     #papers-projects ul li a {
-        width: 50%;
+        width: 100%;
+        display: block;
+        word-wrap: break-word; /* Rompe las palabras largas */
+    overflow-wrap: break-word; /* Asegura el ajuste del texto en palabras largas */
     }
 
     .social-links {
@@ -775,4 +806,94 @@ section h1 {
         justify-content: space-around;
         padding-bottom: 2rem;
     }
+
+     #congress h1 {
+        font-size: 24px;
+        text-align: center;
+        margin-top: 450%;
+    }
+
+    #congress .congress-item {
+        margin-bottom: 10px;
+    }
+
+    #congress .congress-title {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #congress .congress-date {
+        margin-top: 5px;
+        font-size: 14px;
+    }
+
+    #congress .congress-item p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    #congress .social-links {
+        text-align: center;
+    }
+
+    #congress .social-links a {
+        margin: 0 10px;
+    }
+
+    #skills {
+    margin-top: 35%;
+    }
+
+    #reviewed-open, #lecture {
+        padding: 10px;
+        margin-top: 20%;
+    }
+
+    #reviewed-open h1, #lecture h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .reviewed-item, .dataset-item, .lecture-item {
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+
+    .reviewed-title, .lecture-title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .reviewed-title span, .lecture-title span {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .reviewed-date1, .reviewed-date2, .lecture-date {
+        font-size: 14px;
+    }
+
+    .dataset-item p, .lecture-item p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .dataset-item strong {
+        font-size: 16px;
+    }
+
+    .social-links {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .social-links a {
+        margin: 0 10px;
+        font-size: 20px;
+    }
+
 }
+
+    
+
