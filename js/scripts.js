@@ -28,6 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
             event.preventDefault();
             const sectionId = link.getAttribute('data-section');
             showSection(sectionId);
+
+            // Cerrar el menú hamburguesa al hacer clic en un enlace
+            const sidebar = document.querySelector('#sidebar');
+            sidebar.classList.remove('open');
         });
     });
 
@@ -37,6 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
             event.preventDefault();
             showSection('home');
             document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+
+            // Cerrar el menú hamburguesa al hacer clic en el logo
+            const sidebar = document.querySelector('#sidebar');
+            sidebar.classList.remove('open');
         });
     }
 
@@ -47,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('#menuToggle');
     const sidebar = document.querySelector('#sidebar');
 
-    // Asegúrate de que `menuToggle` exista antes de agregar el evento
+
     if (menuToggle && sidebar) {
         menuToggle.addEventListener('click', function() {
             sidebar.classList.toggle('open');
@@ -55,7 +63,4 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         console.error('menuToggle o sidebar no están presentes en el DOM.');
     }
-
-    
-    
 });

@@ -12,7 +12,7 @@ body {
     font-family: var(--font-primary);
     color: var(--primary-color);
     background-color: var(--background-color);
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .wrapper {
@@ -122,13 +122,11 @@ footer {
     flex: 1;
     margin-left: 290px;
     padding: 40px;
-    background-color: var(--background-color); 
-    overflow-y: auto; /* Permite el scroll vertical en el contenido principal */
+    background-color: var(--background-color);
+    overflow-y: auto; 
     box-shadow: 0 2px 5px #140c0c;
-    height: 100vh;  
     display: flex;
-    justify-content: center; /* Centra horizontalmente el contenido */
-    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; 
 }
 
 h1 {
@@ -146,10 +144,9 @@ h1 {
 
 .profile {
     display: flex;
-    justify-content: flex-start; /* Alinea el contenido al principio de la fila */
-    align-items: center;
+    justify-content: flex-start; 
     text-align: left;
-    gap: 20px; /* Espacio entre la imagen y el texto */
+    gap: 20px; 
 }
 
 .profile-img {
@@ -192,6 +189,7 @@ h1 {
     justify-content: center;
     padding-right: 2rem;
     padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 .social-links a {
@@ -204,7 +202,7 @@ h1 {
 }
 
 .social-links a:hover {
-    color: var(--secondary-color); /* Color para el hover */
+    color: var(--secondary-color);
 }
 
 #profile-member {
@@ -247,9 +245,6 @@ h1 {
 
 /* Experience */
 
-#work {
-    margin-top: 40%;
-}
 
 #experience-work {
     margin-bottom: 40px;
@@ -333,7 +328,7 @@ h1 {
 
 #papers-projects ul {
     display: grid;
-    grid-template-columns: repeat(1, 1fr); /* Dos columnas de igual ancho */
+    grid-template-columns: repeat(1, 1fr); 
     gap: 20px; 
     list-style-type: none; 
     padding: 0;
@@ -375,14 +370,13 @@ h1 {
 
 /* congress */
 #congress {
-    padding-top: 60%;
     padding-bottom: 10%;
 }
 
 
 /* Fondo y borde redondeado */
 .congress-item {
-    background-color: var(--secondary-color);
+    background-color: #98c7cc;
     color: var(--background-color);
     border: 1px solid #140c0c;
     border-radius: 8px;
@@ -438,7 +432,7 @@ a:hover {
 }
 
 .dataset-item {
-    background-color: var(--secondary-color);
+    background-color: #98c7cc;
     color: var(--background-color); 
     border-radius: 8px; 
     padding: 15px;
@@ -468,7 +462,7 @@ section h1 {
 
 /* Lecture */
 .lecture-item {
-    background-color: var(--secondary-color);
+    background-color: #98c7cc;
     color: var(--background-color); 
     border-radius: 8px; 
     padding: 15px;
@@ -494,14 +488,11 @@ section h1 {
     color: #666;
 }
 
+
 /* Media query para tablets (max-width: 1200px) */
 @media (max-width: 768px) {
     .section {
         padding: 20px;
-    }
-
-    section {
-        margin-top: 45%;
     }
 
     .profile-details p {
@@ -539,12 +530,6 @@ section h1 {
         margin-left: 0;
     }
 
-
-
-    #home {
-        margin-top: 60%;
-    }
-
     .profile {
         display: flex;
         flex-direction: column;
@@ -577,7 +562,7 @@ section h1 {
     }
 
     #work {
-        margin-top: 40rem;
+        margin-top: 5rem;
     }
 
     table {
@@ -630,10 +615,6 @@ section h1 {
         flex-direction: row;
         justify-content: space-around;
         padding-bottom: 5rem;
-    }
-
-    #congress {
-    margin-top: 60%;
     }
 
     #congress .congress-item {
@@ -697,7 +678,7 @@ section h1 {
     }
 
     #home {
-        margin-top: 65rem;
+        margin-top: 5rem;
     }
 
     .profile {
@@ -717,7 +698,7 @@ section h1 {
     }
 
     .profiles-memberships h1 {
-        margin-top: -60%;
+        margin-top: 10%;
     }
 
     .profiles-memberships ul li {
@@ -742,9 +723,6 @@ section h1 {
         margin-top: 3%;
     }
 
-    #work {
-        margin-top: 50rem;
-    }
 
     table {
         font-size: 12px;
@@ -794,19 +772,15 @@ section h1 {
     #papers-projects ul li a {
         width: 100%;
         display: block;
-        word-wrap: break-word; /* Rompe las palabras largas */
-    overflow-wrap: break-word; /* Asegura el ajuste del texto en palabras largas */
+        word-wrap: break-word;
+     overflow-wrap: break-word;
     }
 
     .social-links {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        padding-bottom: 2rem;
-    }
-
-    #congress {
-    margin-top: 80%;
+        padding-bottom: 5rem;
     }
 
      #congress h1 {
@@ -899,14 +873,6 @@ section h1 {
         font-size: 20px;
     }
 
-
-/*query para notebook */ 
-
-@media (max-width: 1348px)  {
-    #congress {
-        padding-top: 50%;
-    }
-}
 }
 
     
